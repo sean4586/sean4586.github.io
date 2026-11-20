@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; font-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; manifest-src 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="no-referrer">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#080B11">
+<title>Nerve by Sidequest</title>
+<meta name="description" content="Nerve is a native Mac app that pulls Claude Code, Codex, Cursor, local models and your agent team into one window.">
+<meta property="og:title" content="Nerve by Sidequest">
+<meta property="og:description" content="Nerve is a native Mac app that pulls Claude Code, Codex, Cursor, local models and your agent team into one window.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="styles.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<div class="ambient" aria-hidden="true"></div>
+<div class="progress" id="progress"></div>
+
+<nav class="top" aria-label="Main">
+  <div class="wrap">
+    <a class="mark" href="#top"><span class="logo" aria-hidden="true"></span><b>Nerve</b><span>by Sidequest</span></a>
+    <div class="links">
+      <a href="#why">Why</a><a href="#orbit">What's inside</a><a href="#use">How to use</a><a href="#pocket">iOS</a><a href="#status">Status</a>
+    </div>
+    <a class="btn primary small" href="#use">Get started</a>
+  </div>
+</nav>
+
+<aside class="rail" aria-label="Chapters">
+  <a href="#top" data-ch="top"><span>Nerve</span><i></i></a>
+  <a href="#why" data-ch="why"><span>Why</span><i></i></a>
+  <a href="#orbit" data-ch="orbit"><span>What's inside</span><i></i></a>
+  <a href="#use" data-ch="use"><span>How to use</span><i></i></a>
+  <a href="#pocket" data-ch="pocket"><span>iOS</span><i></i></a>
+  <a href="#status" data-ch="status"><span>Status</span><i></i></a>
+  <a href="#projects" data-ch="projects"><span>Projects</span><i></i></a>
+</aside>
+
+<main>
+<!-- HERO -->
+<header class="hero" id="top" data-ch-sec="top">
+  <canvas id="heroSky" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="copy" id="heroCopy">
+      <span class="eyebrow">Sidequest · Native for Mac</span>
+      <h1 id="heroTitle">
+        <span class="ln"><span>One core for</span></span>
+        <span class="ln"><span class="grad">every AI</span></span>
+        <span class="ln"><span>you run.</span></span>
+      </h1>
+      <p class="lede">Nerve is a native Mac app that pulls Claude Code, Codex, Cursor, your local models and your agent team into one window. Each app keeps working the way it always has. You stop hunting for it.</p>
+      <div class="ctas">
+        <a class="btn primary" href="#why">See why we built it</a>
+        <a class="btn secondary" href="#use">How to use it</a>
+      </div>
+    </div>
+    <div class="panel telemetry" aria-label="Build details">
+      <div class="tr"><span class="eyebrow">Personal AI workspace</span></div>
+      <div class="tr"><span>Agent HQ</span><span class="pill"><i></i>Live</span></div>
+      <div class="tr"><span>Router</span><span class="pill"><i></i>Live</span></div>
+      <div class="tr"><span>Vault</span><span class="pill"><i></i>Live</span></div>
+      <hr>
+      <div class="tr"><span class="k">Build</span><span class="v">0.9 · 17 Nov 2026</span></div>
+      <div class="tr"><span class="k">Runs on</span><span class="v">macOS · Apple Silicon</span></div>
+      <div class="tr"><span class="k">Companion</span><span class="v">iOS 26</span></div>
+      <div class="tr"><span class="k">Status</span><span class="pill wait"><i></i>Private beta</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- IMAGINE -->
+<section class="imagine" id="imagine" aria-label="The idea">
+  <div class="pin wrap">
+    <div>
+      <p id="imagineText">Six AI apps. Three terminals. A router in a browser tab. And a notes app nobody opens. We put all of it in *one* *window,* *around* *one* *core.*</p>
+      <p class="lede cap">Nerve started as a weekend fix for our own messy desktop. It turned into the place where all of our AI work happens.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why" data-ch-sec="why">
+  <div class="wrap head">
+    <span class="eyebrow">Why we built it</span>
+    <h2 class="rv">Four ideas, <span class="grad">one core.</span></h2>
+  </div>
+  <div class="why" id="whyScene">
+    <div class="pin wrap">
+      <div class="panel stage" id="whyStage">
+        <canvas id="whySky" aria-hidden="true"></canvas>
+        <div class="bar"><span class="eyebrow">Neural core</span><span class="pill idle" id="whyState"><i></i>Scattered</span></div>
+      </div>
+      <div>
+        <div class="steps">
+          <div class="step on" data-i="0">
+            <span class="eyebrow" style="--tick:var(--waiting)">The sprawl</span>
+            <h3>Twelve tabs by lunchtime.</h3>
+            <p class="lede">Every AI tool ships its own window, its own login and its own idea of where your work lives. By midday nobody can tell which agent changed which file.</p>
+          </div>
+          <div class="step" data-i="1">
+            <span class="eyebrow">One core</span>
+            <h3>Everything connects to one place.</h3>
+            <p class="lede">Claude Code, Codex, Cursor, Antigravity, Ollama and ComfyUI open inside the hub with their own sessions and terminals intact. Nothing gets replaced. It all just lives together.</p>
+          </div>
+          <div class="step" data-i="2">
+            <span class="eyebrow" style="--tick:var(--live)">Every pulse is real</span>
+            <h3>If it moves, it happened.</h3>
+            <p class="lede">The light running across the network is a real request going out to a real model. When nothing is running, nothing moves. We never fake activity to make a screen look busy.</p>
+          </div>
+          <div class="step" data-i="3">
+            <span class="eyebrow" style="--tick:var(--danger)">You hold the stop button</span>
+            <h3>Nothing runs without you.</h3>
+            <p class="lede">Agents ask before they edit. Every request lands in one Approvals tray, and Stop all halts every chat, terminal and worker at once until you say go again.</p>
+          </div>
+        </div>
+        <div class="dots" id="whyDots" aria-hidden="true"><b class="on cur"></b><b></b><b></b><b></b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORBIT -->
+<section id="orbit" data-ch-sec="orbit">
+  <div class="wrap head" style="padding-bottom:0">
+    <span class="eyebrow">What's inside</span>
+    <h2 class="rv">Nine systems. <span class="grad">One window.</span></h2>
+  </div>
+  <div class="orbit" id="orbitScene">
+    <div class="pin">
+      <div class="track" id="track">
+        <article class="panel card"><div class="top"><span class="av" style="--h:#38D6FF">NC</span><span class="pill"><i></i>Home</span></div><h3>Neural core</h3><div class="viz v-core"></div><p>A live 3D map of your models, agents and notes. Bright pulses are live events. Faint drift is the system at rest.</p><ul><li>Metal</li><li>Live graph</li></ul></article>
+        <article class="panel card"><div class="top"><span class="av" style="--h:#4D8DFF">AI</span><span class="pill"><i></i>AI Apps</span></div><h3>Every client, one hub</h3><div class="viz v-nodes"><b style="left:16%;top:30%;--h:#38D6FF"></b><b style="left:34%;top:60%;--h:#4D8DFF;animation-delay:.5s"></b><b style="left:52%;top:28%;--h:#8B6CFF;animation-delay:1s"></b><b style="left:68%;top:62%;--h:#2EC4C4;animation-delay:1.5s"></b><b style="left:84%;top:34%;--h:#B48CFF;animation-delay:2s"></b></div><p>Run them side by side. Send work from one app to another with a handoff, so Codex can review what Claude Code wrote.</p><ul><li>Claude Code</li><li>Codex</li><li>Cursor</li><li>Antigravity</li><li>Ollama</li><li>ComfyUI</li></ul></article>
+        <article class="panel card"><div class="top"><span class="av" style="--h:#2EC4C4">RT</span><span class="pill"><i></i>Router</span></div><h3>114 models, one address</h3><div class="viz v-lanes"><i style="top:28%"></i><i style="top:52%;--h:#8B6CFF"></i><i style="top:76%"></i></div><p>Built on OmniRoute. Fallback chains sit behind one endpoint, so when one provider hits a rate limit the next one takes over.</p><ul><li>Fallback chains</li><li>Cost per call</li></ul></article>
+        <article class="panel card"><div class="top"><span class="av" style="--h:#8B6CFF">HQ</span><span class="pill wait"><i></i>Agents</span></div><h3>A boss and a team</h3><div class="viz v-eq" style="--h:#8B6CFF"><b></b><b style="animation-delay:.2s"></b><b style="animation-delay:.4s"></b><b style="animation-delay:.1s"></b><b style="animation-delay:.5s"></b><b style="animation-delay:.3s"></b></div><p>Hand a job to the boss agent. It splits the work across workers in Agent HQ while you watch each desk and approve what they want to change.</p><ul><li>Agent HQ</li><li>Two-way bridge</li></ul></article>
+        <article class="panel card"><div class="top"><span class="av" style="--h:#B48CFF">KN</span><span class="pill"><i></i>Knowledge</span></div><h3>Notes that light up</h3><div class="viz v-nodes"><b style="left:22%;top:50%;--h:#B48CFF"></b><b style="left:45%;top:26%;--h:#B48CFF;animation-delay:.7s"></b><b style="left:62%;top:64%;--h:#38D6FF;animation-delay:1.4s"></b><b style="left:80%;top:40%;--h:#B48CFF;animation-delay:2.1s"></b></div><p>Your Obsidian vault as a living graph. See which agent read which note, and follow the links from one idea to the next.</p><ul><li>Obsidian</li><li>Read-only</li></ul></article>
+        <article class="panel card"><div class="top"><span class="av" style="--h:#6FA8FF">SE</span><span class="pill idle"><i></i>Sessions</span></div><h3>Pick up where you left off</h3><div class="viz v-lanes"><i style="top:38%;--h:#6FA8FF"></i><i style="top:66%;--h:#6FA8FF"></i></div><p>Every Claude Code and Codex conversation in one history. Open one and carry on in the original CLI or through the router.</p><ul><li>History</li><li>Resume</li></ul></article>
+        <article class="panel card"><div class="top"><span class="av" style="--h:#3DDC97">VO</span><span class="pill"><i></i>Voice</span></div><h3>Hold a key and talk</h3><div class="viz v-eq" style="--h:#3DDC97"><b></b><b style="animation-delay:.15s"></b><b style="animation-delay:.3s"></b><b style="animation-delay:.45s"></b><b style="animation-delay:.6s"></b><b style="animation-delay:.75s"></b><b style="animation-delay:.9s"></b></div><p>It hears you, sends the request to the right place and answers out loud. Start talking over it and it stops to listen.</p><ul><li>Hotkey</li><li>Barge-in</li></ul></article>
+        <article class="panel card"><div class="top"><span class="av" style="--h:#FFB547">AP</span><span class="pill wait"><i></i>Approvals</span></div><h3>One tray, every ask</h3><div class="viz v-nodes"><b style="left:30%;top:50%;--h:#FFB547"></b><b style="left:70%;top:50%;--h:#FF5C6C;animation-delay:1.4s"></b></div><p>Every permission an agent asks for shows up here with the diff. Approve it, deny it, or stop the lot with one button.</p><ul><li>Diffs</li><li>Stop all</li></ul></article>
+        <article class="panel card"><div class="top"><span class="av" style="--h:#E06BFF">LB</span><span class="pill exp"><i></i>Labs</span></div><h3>The experiments</h3><div class="viz v-lanes"><i style="top:28%;--h:#E06BFF"></i><i style="top:52%;--h:#8B6CFF"></i><i style="top:76%;--h:#E06BFF"></i></div><p>The Lounge, where models argue a question out. Bot Lab, an agent security room and a simulation deck. Rough edges included.</p><ul><li>Lounge</li><li>Bot Lab</li><li>SOC</li></ul></article>
+      </div>
+      <div class="wrap meter"><span id="orbitCount">01 / 09</span><div class="bar"><i id="orbitBar"></i></div><span>Keep scrolling</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats" aria-label="By the numbers">
+  <div class="wrap">
+    <div class="panel stat rv"><b class="grad" data-count="114">114</b><span>models routed through one endpoint</span></div>
+    <div class="panel stat rv"><b class="grad" data-count="6">6</b><span>AI clients running inside the hub</span></div>
+    <div class="panel stat rv"><b class="grad" data-count="181">181</b><span>automated tests on the last checkpoint</span></div>
+    <div class="panel stat rv"><b class="grad" data-count="0">0</b><span>fake data points on any screen</span></div>
+  </div>
+</section>
+
+<!-- USE -->
+<section id="use" data-ch-sec="use">
+  <div class="wrap head">
+    <span class="eyebrow">How to use it</span>
+    <h2 class="rv">Five steps to <span class="grad">your first session.</span></h2>
+  </div>
+  <div class="wrap use" id="useScene">
+    <ol>
+      <li class="on" data-i="0"><span class="eyebrow">Step 1 of 5</span><h3>Install and open</h3><p>Drag Nerve into Applications and open it. You need a Mac with Apple Silicon. On first launch it checks which AI tools you already have, so there's nothing to set up for those.</p></li>
+      <li data-i="1"><span class="eyebrow">Step 2 of 5</span><h3>Connect your router</h3><p>Point it at your OmniRoute gateway. It tries <code>localhost</code> first. Your providers and models show up on the neural core as soon as it connects.</p></li>
+      <li data-i="2"><span class="eyebrow">Step 3 of 5</span><h3>Open your AI apps</h3><p>Go to AI Apps and pick a client. It runs inside the hub with its own terminal session. To pass a job to a different app, use Send to AI App.</p></li>
+      <li data-i="3"><span class="eyebrow">Step 4 of 5</span><h3>Talk or type</h3><p>Type in the composer, or hold the voice key and speak. Quick prompts sit under the input for the jobs you run every day.</p></li>
+      <li data-i="4"><span class="eyebrow">Step 5 of 5</span><h3>Approve or stop</h3><p>When an agent wants to change a file, the request lands in the Approvals tray with the diff. Approve it, deny it, or press Stop all.</p></li>
+    </ol>
+    <div class="mockpin" aria-hidden="true">
+      <div class="panel glow mock">
+        <div class="tb"><i></i><i></i><i></i><span id="mockTitle">Nerve · Home</span></div>
+        <div class="body">
+          <div class="side" id="mockSide"><div class="on">Home</div><div>Router</div><div>AI Apps</div><div>Voice</div><div>Approvals</div><div>Agents</div><div>Knowledge</div></div>
+          <div class="main">
+            <div class="scr on" data-i="0">
+              <div class="t">Checking your tools</div>
+              <div class="row"><span class="av" style="--h:#38D6FF">CC</span><b>Claude Code CLI</b><span class="pill"><i></i>Found</span></div>
+              <div class="row"><span class="av" style="--h:#4D8DFF">CX</span><b>Codex</b><span class="pill"><i></i>Found</span></div>
+              <div class="row"><span class="av" style="--h:#8B6CFF">CU</span><b>Cursor</b><span class="pill"><i></i>Found</span></div>
+              <div class="row"><span class="av" style="--h:#2EC4C4">OL</span><b>Ollama · 3 local models</b><span class="pill"><i></i>Found</span></div>
+              <div class="row"><span class="av" style="--h:#B48CFF">CF</span><b>ComfyUI</b><span class="pill idle"><i></i>Not running</span></div>
+            </div>
+            <div class="scr" data-i="1">
+              <div class="t">Router</div>
+              <div class="term"><span class="p">›</span> connecting to your gateway on localhost
+<span class="ok">✓</span> gateway online
+<span class="ok">✓</span> 114 models · 12 fallback chains
+<span class="ok">✓</span> neural core updated</div>
+              <div class="row"><span class="av" style="--h:#2EC4C4">SF</span><b>smart-fast → 4 providers</b><span class="pill"><i></i>Healthy</span></div>
+              <div class="row"><span class="av" style="--h:#6FA8FF">CH</span><b>coding-heavy → 3 providers</b><span class="pill"><i></i>Healthy</span></div>
+            </div>
+            <div class="scr" data-i="2">
+              <div class="t">AI Apps · Claude Code</div>
+              <div class="term"><span class="p">~/projects/site $</span> claude
+Reading 14 files…
+<span class="ok">✓</span> Edited src/index.html (+42 −8)
+<span class="p">›</span> Send to AI App: Codex · "review this diff"</div>
+              <div class="row"><span class="av" style="--h:#4D8DFF">CX</span><b>Codex · review queued</b><span class="pill wait"><i></i>Handoff</span></div>
+            </div>
+            <div class="scr" data-i="3">
+              <div class="t">Voice Command Centre</div>
+              <div class="orb"></div>
+              <div class="wave"><b style="height:30%"></b><b style="height:80%;animation-delay:.1s"></b><b style="height:50%;animation-delay:.2s"></b><b style="height:90%;animation-delay:.3s"></b><b style="height:40%;animation-delay:.4s"></b><b style="height:70%;animation-delay:.5s"></b><b style="height:35%;animation-delay:.6s"></b></div>
+              <div class="row"><b>"Ask Codex to run the tests"</b><span class="pill"><i></i>Listening</span></div>
+            </div>
+            <div class="scr" data-i="4">
+              <div class="t">Approvals · 1 waiting</div>
+              <div class="row"><span class="av" style="--h:#38D6FF">CC</span><b>Claude Code wants to edit config.json</b><span class="pill wait"><i></i>Waiting</span></div>
+              <div class="diff"><div class="d">-  "timeout": 5000</div><div class="a">+  "timeout": 15000</div></div>
+              <div class="acts"><span class="y">Approve</span><span>Deny</span><span class="s">Stop all</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POCKET -->
+<section id="pocket" data-ch-sec="pocket">
+  <div class="wrap pocket">
+    <div class="rv">
+      <span class="eyebrow">In your pocket</span>
+      <h2 style="margin-top:18px">The same core, <span class="grad">on your phone.</span></h2>
+      <p class="lede" style="margin-top:22px">The iOS companion connects to your Mac over Tailscale. Pull towards the centre to open the radial menu, check the router, carry on a Claude Code or Codex session, or just talk to it on the walk home.</p>
+      <ul>
+        <li>Signs in automatically over Tailscale. Switch between your Mac, a Windows PC or a custom host.</li>
+        <li>Login tokens are stored per host and only go to hosts you've allowed.</li>
+        <li>Voice replies stream back, and you can cut in while it's still talking.</li>
+      </ul>
+    </div>
+    <div class="phone" aria-hidden="true">
+      <div class="screen">
+        <canvas id="phoneSky"></canvas>
+        <div class="island"></div>
+        <div class="radial" id="radial">
+          <span data-a="-90">Sessions</span><span data-a="-30">Router</span><span data-a="30">Voice</span><span data-a="90">Agents</span><span data-a="150">Knowledge</span><span data-a="210">AI Apps</span>
+        </div>
+        <div class="host"><span class="pill"><i></i>Mac · Tailscale</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATUS -->
+<section id="status" data-ch-sec="status">
+  <div class="wrap head">
+    <span class="eyebrow">Status</span>
+    <h2 class="rv">What works <span class="grad">right now.</span></h2>
+    <p class="lede">The labels mean what they say. Anything marked in build is real software we use every day. It just hasn't shipped to anyone else yet.</p>
+  </div>
+  <div class="wrap">
+    <div class="board">
+      <div class="panel rv"><span class="pill wait"><i></i>In build</span><h3>Mac app</h3><p>Private beta. Every section shown on this page runs in the current build.</p></div>
+      <div class="panel rv"><span class="pill wait"><i></i>In build</span><h3>iOS companion</h3><p>Runs on our own phones. Not on the App Store yet.</p></div>
+      <div class="panel rv"><span class="pill exp"><i></i>Experimental</span><h3>Labs</h3><p>Lounge, Bot Lab, SOC and SIM work, but they change often and sometimes break.</p></div>
+      <div class="panel rv"><span class="pill idle"><i></i>Planned</span><h3>Public download</h3><p>A signed, notarised build anyone can install. That comes before any public link goes up.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRINCIPLES -->
+<section aria-label="Principles">
+  <div class="wrap head" style="padding-bottom:28px">
+    <span class="eyebrow">How we build</span>
+    <h2 class="rv">Four rules <span class="grad">we don't bend.</span></h2>
+  </div>
+  <div class="wrap princ">
+    <div class="panel rv"><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></span><div><h3>Real data only</h3><p>Every number, node and pulse comes from a real source: a call log, a session file, your vault. If we can't measure something, the screen says so.</p></div></div>
+    <div class="panel rv"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></span><div><h3>Local first</h3><p>It runs on your Mac and talks to your own tools. Your sessions and notes stay on your machine.</p></div></div>
+    <div class="panel rv"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3"/></svg></span><div><h3>Your models, your keys</h3><p>Bring the providers you already pay for, or run local models through Ollama. Secrets never reach the interface.</p></div></div>
+    <div class="panel rv"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg></span><div><h3>You hold the stop</h3><p>Every new launch starts in normal mode. Full autonomy needs a typed confirmation, and it resets when you quit.</p></div></div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="wrap projects" id="projects" data-ch-sec="projects">
+  <div class="head" style="padding-top:0">
+    <span class="eyebrow">Sidequest projects</span>
+    <p class="lede">Sidequest is where we put the things we build for ourselves and then decide are too useful to keep to ourselves. One project so far. More when they're ready to try.</p>
+  </div>
+  <div class="plist">
+    <div class="panel glow proj rv"><span class="av" style="--h:#38D6FF">Ne</span><div><h3>Nerve</h3><p>Your AI apps, agents and models in one native Mac window.</p></div><span class="pill wait"><i></i>In build</span></div>
+    <div class="panel proj soon rv"><span class="av">02</span><div><h3>Next project</h3><p>Going up when it's ready to try.</p></div><span class="pill idle"><i></i>Soon</span></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Nerve · formerly Claude-Smart · Sidequest 2026</span>
+    <span>Nerve is an independent project and is not affiliated with Anthropic, OpenAI or any other provider named here.</span>
+  </div>
+</footer>
+</body>
+</html>
